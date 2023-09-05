@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,5 +15,8 @@ void pall(stack_t **stack, unsigned int line_number)
 	stack_t *tmp;
 
 	for (tmp = *stack; tmp; tmp = tmp->next)
-		fprintf(stdout, "%d\n", tmp->n);
+		{fprintf(stdout, "%d\n", tmp->n); }
+
+		/*free(tmp);*/
+
 }

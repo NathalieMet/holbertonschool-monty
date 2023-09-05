@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -31,4 +31,10 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-#endif /* MAIN_H */
+int main(int argc, char *argv[]);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+stack_t *create_node(int file_value, stack_t *head);
+void free_stack(stack_t *stack);
+
+#endif /* MONTY_H */
