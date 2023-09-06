@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
-	instruction_t opcodes[] = {{"push", push}, {"pall", pall},
+	instruction_t opcodes[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{NULL, NULL}};
 	int i;
 
