@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 	instruction_t opcodes[] = {{"push", push}, {"pall", pall}, {"pint", pint},
-	{"pop", pop}, {"swap", swap}, {"add", add}, {NULL, NULL}};
+	{"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL}};
 	int i;
 
 	if (argc != 2)
