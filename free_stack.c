@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * free_stack - a function
+ * free_stack - Frees the stack
  * @stack: stack
  * Return: void
  */

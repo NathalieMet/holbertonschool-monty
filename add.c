@@ -5,7 +5,7 @@
 
 #define DELIMS " \n\t\r"
 /**
- * add - print all elements of the stack
+ * add - The opcode add adds the top two elements of the stack.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */

@@ -6,7 +6,7 @@
 #define DELIMS " \n\t\r"
 
 /**
- * push - push an element to the stack
+ * push - The opcode push pushes an element to the stack.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */

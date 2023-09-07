@@ -4,10 +4,10 @@
 #include <stdarg.h>
 #include <string.h>
 /**
- * create_node - a function
+ * create_node - creates a node
  * @file_value: an int
  * @head: head
- * Return: On success 1.
+ * Return: 	The new node
  *
  */
 stack_t *create_node(int file_value, stack_t *head)

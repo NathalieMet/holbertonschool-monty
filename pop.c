@@ -5,7 +5,7 @@
 
 #define DELIMS " \n\t\r"
 /**
- * pop - print all elements of the stack
+ * pop - The opcode pop removes the top element of the stack.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */

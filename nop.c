@@ -5,7 +5,7 @@
 
 #define DELIMS " \n\t\r"
 /**
- * nop - print all elements of the stack
+ * nop - The opcode nop doesn’t do anything.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */

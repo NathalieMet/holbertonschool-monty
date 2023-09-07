@@ -5,7 +5,8 @@
 
 #define DELIMS " \n\t\r"
 /**
- * pint - print all elements of the stack
+ * pint - The opcode pint prints the value at the top of the stack, followed by
+ * a new line.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */

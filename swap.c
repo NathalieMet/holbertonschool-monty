@@ -5,7 +5,7 @@
 
 #define DELIMS " \n\t\r"
 /**
- * swap - print all elements of the stack
+ * swap - The opcode swap swaps the top two elements of the stack.
  * @stack: double pointer to the top of the stack
  * @line_number: line number of the current opcode
  */
