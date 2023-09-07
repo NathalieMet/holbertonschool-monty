@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 	instruction_t opcodes[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
-	{NULL, NULL}};
+	 {"div", fdiv}, {NULL, NULL}};
 	int i;
 
 	if (argc != 2)
@@ -48,8 +48,7 @@ int main(int argc, char *argv[])
 			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 			free_stack(stack);
 			free(line);
-			exit(EXIT_FAILURE);
-		}
+			exit(EXIT_FAILURE); }
 	}
 	free(line);
 	free_stack(stack);

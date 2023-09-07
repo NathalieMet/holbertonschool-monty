@@ -7,7 +7,7 @@
  * create_node - creates a node
  * @file_value: an int
  * @head: head
- * Return: 	The new node
+ * Return: The new node
  *
  */
 stack_t *create_node(int file_value, stack_t *head)
