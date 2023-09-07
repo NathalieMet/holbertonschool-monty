@@ -16,6 +16,7 @@ It is developed in C language.
 - [Features](#features)
 - [Examples](#examples)
 - [Exit Status](#exit-status)
+- [Flowchart](#flowchart)
 - [Contributions](#contributions)
 - [License](#license)
 - [Authors](#authors)
@@ -72,6 +73,9 @@ swap.c
 ## Exit Status
 - **EXIT_FAILURE**: General error
 - **EXIT_SUCCESS**: Execution success
+
+## Flowchart
+![flowchart](https://github.com/NathalieMet/holbertonschool-monty/blob/main/stacks%20queues.drawio.png)
 
 ## Contributions
 Contributions are welcome! Feel free to submit pull requests or report issues.
