@@ -14,15 +14,14 @@
 void pchar(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
-	char *argument = strtok(NULL, DELIMS);
 
-	tmp = *stack;
-
-	if (argument == NULL)
+	if ((*stack) == NULL)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
+	tmp = *stack;
 
 	if (tmp->n < 0 || tmp->n > 127)
 	{
