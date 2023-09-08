@@ -16,11 +16,15 @@ void pchar(stack_t **stack, unsigned int line_number)
 	(void) line_number;
 	stack_t *tmp;
 
-	for (tmp = *stack; tmp; tmp = tmp->next)
+
+	tmp = *stack;
+
+	if (tmp->n < 0 || tmp->n > 127)
 	{
-		fprintf(stdout, "%c\n", tmp->n);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
 	}
 
-		/*free(tmp);*/
+	fprintf(stdout, "%c\n", tmp->n);
 
 }
