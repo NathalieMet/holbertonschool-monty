@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 #define DELIMS " \n\t\r"
 /**
  * pstr - The opcode pstr prints the string starting at the top of the stack,
@@ -22,31 +21,24 @@ void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 
+	(void) line_number;
 
 	if ((*stack) == NULL)
 	{
 		fprintf(stdout, "\n");
 		exit(EXIT_SUCCESS);
 	}
-
 	tmp = *stack;
 
-
-
-	while (tmp->n != 0 && (*stack) != NULL)
+	while (tmp)
 	{
-		if (tmp->n < 0 || tmp->n > 127)
+		if (tmp->n < 26 || tmp->n > 127)
 		{
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+			printf("\n");
 			exit(EXIT_FAILURE);
 		}
 		fprintf(stdout, "%c", tmp->n);
 		tmp = tmp->next;
 	}
 	fprintf(stdout, "\n");
-
-
-
-
-
 }
