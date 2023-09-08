@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 	instruction_t opcodes[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
-	 {"div", fdiv}, {"mul", mul}, {"mod", mod}, {NULL, NULL}};
+	 {"div", fdiv}, {"mul", mul}, {"mod", mod}, {"pchar", pchar}, {NULL, NULL}};
 	int i;
 
 	if (argc != 2)
