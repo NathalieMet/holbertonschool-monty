@@ -39,9 +39,13 @@ void pstr(stack_t **stack, unsigned int line_number)
 
 	while (tmp->n != 0 && (*stack) != NULL)
 	{
-		fprintf(stdout, "%c\n", tmp->n);
+		fprintf(stdout, "%c", tmp->n);
 		tmp = tmp->next;
 	}
+	fprintf(stdout, "\n");
+	
+
+
 
 
 }
