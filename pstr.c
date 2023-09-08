@@ -31,19 +31,20 @@ void pstr(stack_t **stack, unsigned int line_number)
 
 	tmp = *stack;
 
-	if (tmp->n < 0 || tmp->n > 127)
-	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
-		exit(EXIT_FAILURE);
-	}
+
 
 	while (tmp->n != 0 && (*stack) != NULL)
 	{
+		if (tmp->n < 0 || tmp->n > 127)
+		{
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+			exit(EXIT_FAILURE);
+		}
 		fprintf(stdout, "%c", tmp->n);
 		tmp = tmp->next;
 	}
 	fprintf(stdout, "\n");
-	
+
 
 
 
