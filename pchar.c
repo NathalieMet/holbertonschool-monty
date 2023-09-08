@@ -13,12 +13,13 @@
  */
 void pchar(stack_t **stack, unsigned int line_number)
 {
-	char new_value = itoa((*stack)->n);
 	(void) line_number;
 	stack_t *tmp;
 
 	for (tmp = *stack; tmp; tmp = tmp->next)
-		{fprintf(stdout, "%c\n", new_value); }
+	{
+		fprintf(stdout, "%c\n", tmp->n);
+	}
 
 		/*free(tmp);*/
 
