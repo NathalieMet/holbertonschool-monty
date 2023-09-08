@@ -13,11 +13,16 @@
  */
 void pchar(stack_t **stack, unsigned int line_number)
 {
-	(void) line_number;
 	stack_t *tmp;
-
+	char *argument = strtok(NULL, DELIMS);
 
 	tmp = *stack;
+
+	if (argument == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
 	if (tmp->n < 0 || tmp->n > 127)
 	{
