@@ -21,7 +21,8 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 	instruction_t opcodes[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
-	 {"div", fdiv}, {"mul", mul}, {"mod", mod}, {"pchar", pchar}, {NULL, NULL}};
+	{"div", fdiv}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
+	{"pstr", pstr}, {NULL, NULL}};
 	int i;
 
 	if (argc != 2)
@@ -41,15 +42,13 @@ int main(int argc, char *argv[])
 		{
 			if (strcmp(opcode, opcodes[i].opcode) == 0)
 			{	opcodes[i].f(&stack, line_number);
-				break; }
-		}
+				break; }}
 		if (opcodes[i].opcode == NULL)
 		{
 			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 			free_stack(stack);
 			free(line);
-			exit(EXIT_FAILURE); }
-	}
+			exit(EXIT_FAILURE); }}
 	free(line);
 	free_stack(stack);
 	fclose(file);
